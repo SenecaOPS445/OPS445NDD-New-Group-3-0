@@ -72,4 +72,13 @@ def snapshot_memory():
     file.close()
     return meminfo
 
+def calculate_memory_usage():
 
+        memory = snapshot_memory()
+        if "MemTotal" in memory and "MemAvailable" in memory:
+            total = memory["MemTotal"]
+            available = memory["MemAvailable"]
+            used = total - available
+            usage = used / total * 100
+            return usage
+        return 0
