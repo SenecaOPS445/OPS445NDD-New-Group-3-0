@@ -87,3 +87,8 @@ def calculate_memory_usage():
         return usage
     return 0
 
+if __name__ == "__main__":
+
+    cpu_usage = calculate_cpu_usage(args.interval)
+    mem_usage = calculate_memory_usage()
+
