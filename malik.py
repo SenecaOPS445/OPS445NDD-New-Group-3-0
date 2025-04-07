@@ -51,4 +51,4 @@ def generate_reports(cpu_usage, mem_usage, output_dir):
 if __name__ == "__main__":
 
 # Generate the reports and save them in the specified directory
-    generate_reports(cpu_usage, mem_usage,
+    generate_reports(cpu_usage, mem_usage)
