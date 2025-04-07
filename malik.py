@@ -48,3 +48,7 @@ def generate_reports(cpu_usage, mem_usage, output_dir):
     save_text_report(report, output_dir + "/system_report.txt") #the report is made in the output directory with the name system_report.txt
     save_text_report(visualization, output_dir + "/visual_report.txt") #the visualzation is make in the output directory with the name  visual_report.txt
 
+if __name__ == "__main__":
+
+# Generate the reports and save them in the specified directory
+    generate_reports(cpu_usage, mem_usage,
