@@ -51,3 +51,16 @@ def calculate_cpu_usage(interval):
         return 0
     usage = (total_diff - idle_diff) / total_diff * 100
     return usage
+
+def snapshot_memory():
+
+    meminfo = {}
+    file = open("/proc/meminfo", "r")
+    for line in file:
+        parts = line.split(":")
+        if len(parts) >= 2:
+            key = parts[0].strip()               
+            value = parts[1].strip().split()[0]  
+            meminfo[key] = int(value)
+    file.close()
+    return meminfo
